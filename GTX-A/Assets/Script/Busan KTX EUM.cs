@@ -25,6 +25,26 @@ public class BusanKTXEUM : MonoBehaviour
             KTX.AddForce(0, 0, +speed);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Stop")
+            Debug.Log("정위치 정차");
+
+        if (collision.gameObject.tag == "Train stop")
+            Debug.Log("출발역 입니다. 3분있다 출발하세요");
+
+        if (collision.gameObject.tag == "Seoul")
+            Debug.Log(" 이번역은 서울역 입니다. 정위치 정차");
+
+        if (collision.gameObject.tag == "Samseong")
+            Debug.Log(" 이번역은 삼성역 입니다. 정위치 정차");
+
+        if (collision.gameObject.tag == "Suseo")
+            Debug.Log(" 이번역은 수서역 입니다. 정위치 정차");
+
+
+    }
 }
 
   
